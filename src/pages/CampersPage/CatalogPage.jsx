@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getCampers } from '../../campers-api';
 import CampersList from '../../components/CampersList/CampersList';
 import Loader from '../../components/Loader/Loader';
+import { catalog } from './CatalogPage.module.css';
 
 export default function CatalogPage() {
     const [campers, setCampers] = useState([]);
@@ -27,7 +28,7 @@ export default function CatalogPage() {
         getData();
     }, []);
     return (
-        <div>
+        <div className={catalog}>
             {error && <p>Whoops, something went wrong! Please try reloading this page!</p>}
             {loading && <Loader />}
             <CampersList campers={campers} />

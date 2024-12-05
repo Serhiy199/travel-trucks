@@ -1,16 +1,51 @@
 .listCamper {
     /* width: calc((100% - 32px) / 3); */
+    display: flex;
+    gap: 24px;
     padding: 24px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+    border: 1px solid #dadde1;
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .img {
     display: block;
     height: 320px;
     width: 292px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.characteristic {
+    text-align: left;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.ratingCamper {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.textEllipsis {
+    white-space: nowrap; /* Текст в один рядок */
+    overflow: hidden; /* Приховує текст, що виходить за межі */
+    text-overflow: ellipsis; /* Додає три крапки */
+    width: 525px; /* Фіксована ширина блоку */
+    color: #475467;
+    margin-bottom: 24px;
 }
 
 .listMovie {
@@ -24,13 +59,12 @@
     color: blue;
 }
 
-.title {
-    margin-bottom: 0;
-    padding-bottom: 10px;
-}
-
-.listFavMov {
+/* .listFavMov {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+} */
+
+.like {
+    width: 25px;
 }
