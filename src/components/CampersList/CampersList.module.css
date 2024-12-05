@@ -1,0 +1,36 @@
+.listCamper {
+    /* width: calc((100% - 32px) / 3); */
+    padding: 24px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.img {
+    display: block;
+    height: 320px;
+    width: 292px;
+}
+
+.listMovie {
+    color: black;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.listMovie:hover {
+    color: blue;
+}
+
+.title {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.listFavMov {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
