@@ -1,20 +1,24 @@
 import { Link, useLocation } from 'react-router-dom';
 import { GrMapLocation } from 'react-icons/gr';
 import { FaStar } from 'react-icons/fa';
+import { IoMdHeartEmpty } from 'react-icons/io';
 import Button from '../Button/Button';
 import {
     listCamper,
     img,
-    characteristic,
+    info,
     listMovie,
     title,
     name,
+    infoPrice,
+    price,
+    buttonLike,
+    iconLike,
     ratingCamper,
     iconStar,
     ratingText,
     iconLocation,
     textEllipsis,
-    like,
 } from './CampersList.module.css';
 
 export default function CampersList({ campers }) {
@@ -31,17 +35,21 @@ export default function CampersList({ campers }) {
                         <img
                             className={img}
                             src={
-                                camper.gallery
-                                    ? `https://ftp.goit.study/img/campers-test-task/${camper.id}-1.webp`
+                                camper.gallery[0].original
+                                    ? `${camper.gallery[0].original}`
                                     : defaultImg
                             }
-                            // width={292}
                             alt="poster"
                         />
-                        <div className={characteristic}>
+                        <div className={info}>
                             <div className={title}>
                                 <h2 className={name}>{camper.name}</h2>
-                                <h2 className={name}>€ {camper.price}.00</h2>
+                                <div className={infoPrice}>
+                                    <h2 className={price}>€ {camper.price}.00</h2>
+                                    <button className={buttonLike}>
+                                        <IoMdHeartEmpty className={iconLike} />
+                                    </button>
+                                </div>
                             </div>
                             <div className={ratingCamper}>
                                 <span className={ratingText}>
@@ -59,7 +67,6 @@ export default function CampersList({ campers }) {
                                 {<Button text="Show more" />}
                             </Link>
                         </div>
-                        <div className={like}>1</div>
                     </li>
                 );
             })}

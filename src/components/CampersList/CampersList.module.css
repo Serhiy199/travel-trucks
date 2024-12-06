@@ -17,7 +17,7 @@
     border-radius: 10px;
 }
 
-.characteristic {
+.info {
     text-align: left;
 }
 
@@ -31,6 +31,41 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 1.3;
+}
+
+.infoPrice {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.buttonLike {
+    display: flex;
+    justify-content: center; /* Горизонтальне вирівнювання по центру */
+    align-items: center; /* Вертикальне вирівнювання по центру */
+    background: none; /* Прибирає фон */
+    border: none; /* Прибирає рамку */
+    padding: 0; /* Скидає відступи */
+    margin: 0; /* Скидає зовнішні відступи */
+    box-shadow: none; /* Прибирає тіні */
+    text-align: inherit; /* Наслідує вирівнювання тексту */
+}
+
+.iconLike {
+    width: 26px;
+    height: 24px;
+    fill: #101828;
+}
+
+.iconLike:hover,
+.iconLike:focus {
+    fill: #e44848;
 }
 
 .ratingCamper {
@@ -65,7 +100,7 @@
     white-space: nowrap; /* Текст в один рядок */
     overflow: hidden; /* Приховує текст, що виходить за межі */
     text-overflow: ellipsis; /* Додає три крапки */
-    width: 525px; /* Фіксована ширина блоку */
+    width: 490px; /* Фіксована ширина блоку */
     color: #475467;
     margin-bottom: 24px;
 }
@@ -86,7 +121,3 @@
     gap: 16px;
     flex-wrap: wrap;
 } */
-
-.like {
-    width: 25px;
-}
