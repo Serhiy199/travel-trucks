@@ -62,7 +62,7 @@ export default function CampersList({ campers }) {
                             </div>
                             <p className={textEllipsis}>{camper.description}</p>
                             <div></div>
-                            <Link to={`/catalog/${camper.id}`} state={location}>
+                            <Link to={`/campers/${camper.id}`} state={location}>
                                 {' '}
                                 {<Button text="Show more" />}
                             </Link>

@@ -5,6 +5,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import CatalogPage from './pages/CampersPage/CatalogPage';
+import CamperDetailsPage from './pages/CamperDetailsPage/CamperDetailsPage';
 
 function App() {
     return (
@@ -13,8 +14,8 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/catalog" element={<CatalogPage />} />
-                <Route path="/campers/:id" element={<div>Trucks page</div>} />
+                <Route path="/campers" element={<CatalogPage />} />
+                <Route path="/campers/:camperId" element={<CamperDetailsPage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>
