@@ -68,42 +68,14 @@
     fill: #e44848;
 }
 
-.ratingCamper {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-    align-items: center;
-}
-
-.ratingText {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.iconStar {
-    width: 16px;
-    height: 16px;
-    fill: #ffc531;
-}
-
-/* .ratingTe {
-    align-items: center;
-} */
-
-.iconLocation {
-    width: 16px;
-    height: 16px;
-}
-
 .textEllipsis {
     white-space: nowrap; /* Текст в один рядок */
     overflow: hidden; /* Приховує текст, що виходить за межі */
     text-overflow: ellipsis; /* Додає три крапки */
     width: 490px; /* Фіксована ширина блоку */
     color: #475467;
+    margin-top: 24px;
     margin-bottom: 24px;
-    color: #;
 }
 
 .listMovie {

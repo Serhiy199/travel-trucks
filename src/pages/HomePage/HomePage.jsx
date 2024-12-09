@@ -8,7 +8,7 @@ export default function HomePage() {
             <div>
                 <h1 className={heroTitle}>Campers of your dreams</h1>
                 <h2 className={heroText}>You can find everything you want in our catalog</h2>
-                <Link to={'/catalog'}> {<Button text="View Now" />}</Link>
+                <Link to={'/campers'}> {<Button text="View Now" />}</Link>
             </div>
         </section>
     );

@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import { GrMapLocation } from 'react-icons/gr';
-import { FaStar } from 'react-icons/fa';
+
 import { IoMdHeartEmpty } from 'react-icons/io';
 import Button from '../Button/Button';
+import InfoLocation from '../InfoLocation/InfoLocation';
 import {
     listCamper,
     img,
@@ -13,10 +13,6 @@ import {
     price,
     buttonLike,
     iconLike,
-    ratingCamper,
-    iconStar,
-    ratingText,
-    iconLocation,
     textEllipsis,
 } from './CampersList.module.css';
 
@@ -50,15 +46,7 @@ export default function CampersList({ campers }) {
                                     </button>
                                 </div>
                             </div>
-                            <div className={ratingCamper}>
-                                <span className={ratingText}>
-                                    <FaStar className={iconStar} /> {camper.rating}{' '}
-                                    <span> ({camper.reviews.length} Reviews)</span>
-                                </span>
-                                <span className={ratingText}>
-                                    <GrMapLocation className={iconLocation} /> {camper.location}
-                                </span>
-                            </div>
+                            <InfoLocation camper={camper} />
                             <p className={textEllipsis}>{camper.description}</p>
                             <div></div>
                             <Link to={`/campers/${camper.id}`} state={location}>
