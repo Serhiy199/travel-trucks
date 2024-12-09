@@ -3,6 +3,7 @@ import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { CamperId } from '../../campers-api';
 import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error/Error';
+import { container, link } from './CamperDetailsPage.module.css';
 
 export default function CamperDetailsPage() {
     const [camperData, setCamperData] = useState([]);
@@ -29,12 +30,23 @@ export default function CamperDetailsPage() {
         }
         getCamper();
     }, [camperId]);
+
     console.log(camperData);
+
     return (
-        <>
+        <div className={container}>
             {error && <Error />}
             {loading && <Loader />}
-            Trucks page: {camperId}
-        </>
+            <section>
+                <h2 className={name}>{camperData.name}</h2>
+            </section>
+            <Link className={link} to={'features'}>
+                Features
+            </Link>
+            <Link className={link} to={'reviews'}>
+                Reviews
+            </Link>
+            <Outlet />
+        </div>
     );
 }
