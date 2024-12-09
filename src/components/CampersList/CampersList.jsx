@@ -7,7 +7,6 @@ import {
     listCamper,
     img,
     info,
-    listMovie,
     title,
     name,
     infoPrice,

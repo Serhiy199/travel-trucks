@@ -4,6 +4,7 @@ import { getCampers } from '../../campers-api';
 import CampersList from '../../components/CampersList/CampersList';
 import Loader from '../../components/Loader/Loader';
 import { catalog } from './CatalogPage.module.css';
+import Error from '../../components/Error/Error';
 
 export default function CatalogPage() {
     const [campers, setCampers] = useState([]);
@@ -29,7 +30,7 @@ export default function CatalogPage() {
     }, []);
     return (
         <div className={catalog}>
-            {error && <p>Whoops, something went wrong! Please try reloading this page!</p>}
+            {error && <Error />}
             {loading && <Loader />}
             <CampersList campers={campers} />
         </div>
