@@ -56,7 +56,11 @@ export default function CamperDetailsPage() {
                 <div>
                     <Outlet />
                 </div>
-                <div></div>
+                <div>
+                    <div>
+                        <Outlet />
+                    </div>
+                </div>
             </section>
         </div>
     );
